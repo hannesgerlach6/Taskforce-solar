@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tf-primary: #1B004E;
+  --tf-secondary: #00E5B9;
+  --tf-dark: #0D0025;
+  --tf-accent: #00C9A7;
+  --tf-purple: #2D1B5E;
+}
+
+body {
+  background: linear-gradient(135deg, var(--tf-dark) 0%, var(--tf-primary) 50%, var(--tf-purple) 100%);
+  min-height: 100vh;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tf-secondary);
+  border-radius: 4px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 229, 185, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 229, 185, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
